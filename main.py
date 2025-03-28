@@ -9,7 +9,7 @@ from sentence_transformers import SentenceTransformer
 import google.generativeai as genai
 
 load_dotenv()
-genai_api_key = os.getenv("GEMINI_API_KEY")
+genai_api_key = os.getenv("GEMINI_API_KEY") or "AIzaSyC87pJSv_ocfWQoKgdSP7aeNT3kYxSDguk"
 genai.configure(api_key=genai_api_key)  
 gemini_model = genai.GenerativeModel("gemini-2.0-pro-exp")
  
